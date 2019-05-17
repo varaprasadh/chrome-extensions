@@ -1,0 +1,28 @@
+{
+    "version": "1.0",
+    "name": "searcher",
+    "description": "it can find meaning for a word",
+    "manifest_version": 2,
+    "icons": {
+        "128": "colorhead.svg",
+        "48": "colorhead.svg",
+        "16": "colorhead.svg"
+    },
+    "browser_action": {
+        "default_icon": "colorhead.svg",
+        "default_popup": "popup.html",
+        "default_title": "pop_up"
+    },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["mean_in_main.js"]
+    }],
+    "background": {
+        "scripts": ["fetcher.js"]
+    },
+    "permissions": [
+        "tabs", "contextMenus", "http://*/*",
+        "https://*/*"
+    ]
+
+}
