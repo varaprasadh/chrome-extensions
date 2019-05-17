@@ -1,0 +1,29 @@
+{
+    "name": "tab-mover",
+    "manifest_version": 2,
+    "version": "1.0",
+    "icons": {
+        "128": "./images/icon.png",
+        "48": "./images/icon.png",
+        "16": "./images/icon.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "128": "./images/icon.png",
+            "48": "./images/icon.png",
+            "16": "./images/icon.png"
+        },
+        "default_title": "tab-mover"
+    },
+
+    "background": {
+        "scripts": [
+            "./background.js"
+        ],
+        "persistent": false
+    },
+
+    "permissions": [
+        "tabs"
+    ]
+}
