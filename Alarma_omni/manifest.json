@@ -1,0 +1,42 @@
+{
+    "name": "Alarma",
+    "manifest_version": 2,
+    "version": "1.0",
+     "omnibox": {
+         "keyword": "bean"
+     },
+    "icons": {
+        "128": "./images/icon.png",
+        "48": "./images/icon.png",
+        "16": "./images/icon.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "128": "./images/icon.png",
+            "48": "./images/icon.png",
+            "16": "./images/icon.png"
+        },
+        "default_popup":"popup.html",
+        "default_title": "Alarma-it Closes the page instead your eyes"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "css": [
+                "./css/content.css"
+            ],
+            "js": [
+                "./js/content.js"
+            ]
+        }
+    ],
+    "background":{
+       "scripts":["js/background.js"],
+       "persistent":true
+    },
+    "permissions": [
+        "tabs","alarms"
+    ]
+}
