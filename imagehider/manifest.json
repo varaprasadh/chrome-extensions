@@ -1,0 +1,14 @@
+{
+    "name":"image hider",
+    "version":"1.0",
+    "manifest_version":2,
+    "icons":{
+        "128":"images/icon.png",
+        "48":"images/icon.png",
+        "16":"images/icon.png"
+    },
+    "content_scripts":[{
+       "matches": ["<all_urls>"],
+        "css":["hider.css"]
+    }]
+}
