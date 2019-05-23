@@ -1,0 +1,33 @@
+{
+    "name":"snap tab",
+    "version":"1.0",
+    "manifest_version":2,
+    "description":"takes screenshot",
+    "icons":{
+        "128":"images/icon.png",
+        "48":"images/icon.png",
+        "16":"images/icon.png"
+    },
+    "browser_action":{
+      "default_icon":{
+          "128": "images/icon.png",
+          "48": "images/icon.png",
+          "16": "images/icon.png"
+      },
+      "default_title":"snaptab"
+    },
+    "background":{
+        "scripts":["js/background.js"],
+        "persistent":false
+    },
+    "content_scripts":[
+        {
+            "matches":["<all_urls>"],
+            "js":["js/content.js"],
+            "css":["css/style.css"]
+        }
+    ],
+    "permissions": [
+       "desktopCapture","tabs"
+    ]
+}
